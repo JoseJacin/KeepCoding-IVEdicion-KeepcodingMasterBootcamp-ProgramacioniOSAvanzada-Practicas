@@ -15,9 +15,13 @@
 		994360011E53B1FC00E5EE98 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994360001E53B1FC00E5EE98 /* Deck.swift */; };
 		994360031E53B2A600E5EE98 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994360021E53B2A600E5EE98 /* Card.swift */; };
 		994360071E53B49100E5EE98 /* DeckInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994360061E53B49100E5EE98 /* DeckInteractor.swift */; };
-		994360091E53B7F400E5EE98 /* DeckOfCardsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994360081E53B7F400E5EE98 /* DeckOfCardsAPIManager.swift */; };
+		994360091E53B7F400E5EE98 /* DeckOfCardsAPIManagerGCDImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994360081E53B7F400E5EE98 /* DeckOfCardsAPIManagerGCDImpl.swift */; };
 		9943600B1E53C1F100E5EE98 /* GetCardFromDeckInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943600A1E53C1F100E5EE98 /* GetCardFromDeckInteractor.swift */; };
 		9943600D1E53C51600E5EE98 /* GetCardImageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943600C1E53C51600E5EE98 /* GetCardImageInteractor.swift */; };
+		DF4A63951E54E956006507B9 /* DeckOfCardsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A63941E54E956006507B9 /* DeckOfCardsAPIManager.swift */; };
+		DF4A63971E54EDA4006507B9 /* DeckOfCardsAPIManagerFakeImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A63961E54EDA4006507B9 /* DeckOfCardsAPIManagerFakeImpl.swift */; };
+		DF4A63991E54F700006507B9 /* DeckOfCardsAPIManagerNSOperationQueueImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A63981E54F700006507B9 /* DeckOfCardsAPIManagerNSOperationQueueImpl.swift */; };
+		DF4A639B1E5504C6006507B9 /* DeckOfCardsAPIManagerNSURLSessionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A639A1E5504C6006507B9 /* DeckOfCardsAPIManagerNSURLSessionImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +35,13 @@
 		994360001E53B1FC00E5EE98 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		994360021E53B2A600E5EE98 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		994360061E53B49100E5EE98 /* DeckInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckInteractor.swift; sourceTree = "<group>"; };
-		994360081E53B7F400E5EE98 /* DeckOfCardsAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckOfCardsAPIManager.swift; sourceTree = "<group>"; };
+		994360081E53B7F400E5EE98 /* DeckOfCardsAPIManagerGCDImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckOfCardsAPIManagerGCDImpl.swift; sourceTree = "<group>"; };
 		9943600A1E53C1F100E5EE98 /* GetCardFromDeckInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCardFromDeckInteractor.swift; sourceTree = "<group>"; };
 		9943600C1E53C51600E5EE98 /* GetCardImageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCardImageInteractor.swift; sourceTree = "<group>"; };
+		DF4A63941E54E956006507B9 /* DeckOfCardsAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckOfCardsAPIManager.swift; sourceTree = "<group>"; };
+		DF4A63961E54EDA4006507B9 /* DeckOfCardsAPIManagerFakeImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckOfCardsAPIManagerFakeImpl.swift; sourceTree = "<group>"; };
+		DF4A63981E54F700006507B9 /* DeckOfCardsAPIManagerNSOperationQueueImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckOfCardsAPIManagerNSOperationQueueImpl.swift; sourceTree = "<group>"; };
+		DF4A639A1E5504C6006507B9 /* DeckOfCardsAPIManagerNSURLSessionImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckOfCardsAPIManagerNSURLSessionImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +125,11 @@
 		994360051E53B41C00E5EE98 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				994360081E53B7F400E5EE98 /* DeckOfCardsAPIManager.swift */,
+				DF4A63941E54E956006507B9 /* DeckOfCardsAPIManager.swift */,
+				994360081E53B7F400E5EE98 /* DeckOfCardsAPIManagerGCDImpl.swift */,
+				DF4A63961E54EDA4006507B9 /* DeckOfCardsAPIManagerFakeImpl.swift */,
+				DF4A63981E54F700006507B9 /* DeckOfCardsAPIManagerNSOperationQueueImpl.swift */,
+				DF4A639A1E5504C6006507B9 /* DeckOfCardsAPIManagerNSURLSessionImpl.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -154,6 +166,7 @@
 				TargetAttributes = {
 					99435FE71E53A7A400E5EE98 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6RPGGVZM93;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -194,12 +207,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4A63991E54F700006507B9 /* DeckOfCardsAPIManagerNSOperationQueueImpl.swift in Sources */,
+				DF4A63951E54E956006507B9 /* DeckOfCardsAPIManager.swift in Sources */,
+				DF4A639B1E5504C6006507B9 /* DeckOfCardsAPIManagerNSURLSessionImpl.swift in Sources */,
 				994360011E53B1FC00E5EE98 /* Deck.swift in Sources */,
 				99435FEE1E53A7A400E5EE98 /* ViewController.swift in Sources */,
-				994360091E53B7F400E5EE98 /* DeckOfCardsAPIManager.swift in Sources */,
+				994360091E53B7F400E5EE98 /* DeckOfCardsAPIManagerGCDImpl.swift in Sources */,
 				99435FEC1E53A7A400E5EE98 /* AppDelegate.swift in Sources */,
 				994360071E53B49100E5EE98 /* DeckInteractor.swift in Sources */,
 				9943600B1E53C1F100E5EE98 /* GetCardFromDeckInteractor.swift in Sources */,
+				DF4A63971E54EDA4006507B9 /* DeckOfCardsAPIManagerFakeImpl.swift in Sources */,
 				994360031E53B2A600E5EE98 /* Card.swift in Sources */,
 				9943600D1E53C51600E5EE98 /* GetCardImageInteractor.swift in Sources */,
 			);
@@ -322,9 +339,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6RPGGVZM93;
 				INFOPLIST_FILE = Cards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.freniche.Cards;
+				PRODUCT_BUNDLE_IDENTIFIER = JoseJacin.Cards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -334,9 +352,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6RPGGVZM93;
 				INFOPLIST_FILE = Cards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.freniche.Cards;
+				PRODUCT_BUNDLE_IDENTIFIER = JoseJacin.Cards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -361,6 +380,7 @@
 				99435FFC1E53A7A400E5EE98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
