@@ -15,6 +15,7 @@
 		DF4A63D61E550B46006507B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF4A63D51E550B46006507B9 /* Assets.xcassets */; };
 		DF4A63D91E550B46006507B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4A63D71E550B46006507B9 /* LaunchScreen.storyboard */; };
 		DF4A63E51E5513A4006507B9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A63E41E5513A4006507B9 /* CoreDataManager.swift */; };
+		DFBD32991E5B8835004F42C0 /* Person+inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD32981E5B8835004F42C0 /* Person+inits.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DF4A63D81E550B46006507B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF4A63DA1E550B46006507B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF4A63E41E5513A4006507B9 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		DFBD32981E5B8835004F42C0 /* Person+inits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+inits.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				DF4A63CB1E550B46006507B9 /* CoreDataHelloWorld.xcdatamodeld */,
+				DFBD32981E5B8835004F42C0 /* Person+inits.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				DF4A63CA1E550B46006507B9 /* AppDelegate.swift in Sources */,
 				DF4A63CF1E550B46006507B9 /* MasterViewController.swift in Sources */,
 				DF4A63E51E5513A4006507B9 /* CoreDataManager.swift in Sources */,
+				DFBD32991E5B8835004F42C0 /* Person+inits.swift in Sources */,
 				DF4A63D11E550B46006507B9 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +348,7 @@
 				DF4A63DF1E550B46006507B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

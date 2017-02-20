@@ -12,9 +12,7 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
     func configureView() {
-        // Update the user interface for the detail item.
         if let detail = self.detailItem {
             if let label = self.detailDescriptionLabel {
                 label.text = detail.timestamp!.description
@@ -24,13 +22,20 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        // Para la práctica se inserta un nuevo evento
+        // Se crea un contexto que parta del contexto del detalle
+        let context = detailItem?.managedObjectContext
+        let ev = Event(context: context!)
+        ev.timestamp = NSDate()
+        
+        // Aunque no es necesario, se fuerza la grabación del contexto
+        do {
+            try context?.save()
+        } catch {
+            
+        }
     }
 
     var detailItem: Event? {

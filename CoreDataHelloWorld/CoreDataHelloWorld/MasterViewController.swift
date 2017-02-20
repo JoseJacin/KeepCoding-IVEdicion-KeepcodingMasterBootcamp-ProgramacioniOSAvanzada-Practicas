@@ -18,46 +18,52 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // Se añade
         self.navigationItem.leftBarButtonItem = self.editButtonItem
 
+        // Se añade el botón
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         self.navigationItem.rightBarButtonItem = addButton
+        
+        obtainReferenceToDetailViewControllerFromSplitViewControllerForUserIDontKnowWhen()
+    }
+
+    // Función que controla si se encuentra en un splitViewController y recupera con controller que tiene
+    // Esta función se puede sacar a una clase de "ayuda" inyectándole el self.splitViewController.
+    // De esta forma la función se puede testear y ya sería rehusable
+    func obtainReferenceToDetailViewControllerFromSplitViewControllerForUserIDontKnowWhen() {
+        // Si nos encontramos en un splitViewController se recuperan todos los controller del splitViewController
         if let split = self.splitViewController {
+            // Se recuperan todos los splirViewController
             let controllers = split.viewControllers
+            // Nos quedamos con el detailViewController del splitViewController
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    // Función que inserta un nuevo objeto
     func insertNewObject(_ sender: Any) {
-        let context = self.fetchedResultsController.managedObjectContext
+        guard let context = self.managedObjectContext else { return }
+        
         let newEvent = Event(context: context)
-             
-        // If appropriate, configure the new managed object.
         newEvent.timestamp = NSDate()
 
         // Save the context.
         do {
             try context.save()
         } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
     }
 
     // MARK: - Segues
-
+    // Método que se ejecuta cuando se está haciendo una transición
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
@@ -88,21 +94,24 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         return cell
     }
 
+    // Función que retorna si se pueden editar filas del tableView
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
 
+    // Función que se ejecuta cuando se realiza una acción sobre el tableView
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        // Se consulta si el estilo de borrado es delete
         if editingStyle == .delete {
+            // Se recupera el contexto
             let context = self.fetchedResultsController.managedObjectContext
+            // Se elimina el objeto
             context.delete(self.fetchedResultsController.object(at: indexPath))
                 
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
@@ -121,8 +130,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
         
         let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
-        
-        // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
@@ -132,15 +139,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: "Master")
-        aFetchedResultsController.delegate = self
-        _fetchedResultsController = aFetchedResultsController
+        _fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: "Master")
+        _fetchedResultsController?.delegate = self
         
         do {
+            // Descarga el primer bloque de registros (20)
             try _fetchedResultsController!.performFetch()
         } catch {
-             // Replace this implementation with code to handle the error appropriately.
-             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
              let nserror = error as NSError
              fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
@@ -149,11 +154,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }    
     var _fetchedResultsController: NSFetchedResultsController<Event>? = nil
 
+    // MARK: - NSFetchedResultController delegate
+    // Función que indica que se va iniciar un cambio en el contenido del contexto
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         self.tableView.beginUpdates()
     }
 
+    // Función que se ejecuta cuando se crea/elimina una sección (groupBy) en el fetchedresultsController
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        // Se actualiza la tableView
         switch type {
             case .insert:
                 self.tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
@@ -164,6 +173,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
     }
 
+    // Función que se ejecuta cuando una sección se ha modificado (insert/delete/update/move) un registro en el contexto
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
             case .insert:
@@ -177,6 +187,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
     }
 
+    // Función que indica que se a finalizado un cambio en el contenido del contexto
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         self.tableView.endUpdates()
     }
