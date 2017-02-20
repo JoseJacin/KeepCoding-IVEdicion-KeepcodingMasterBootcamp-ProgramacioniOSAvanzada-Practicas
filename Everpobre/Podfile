@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '10.0'
+
+use_frameworks!
+
+def common_pods
+	pod 'PQFCustomLoaders'
+	pod 'FillableLoaders'
+end
+
+target 'Everpobre' do
+	# Pods for Everpobre
+	common_pods
+
+end

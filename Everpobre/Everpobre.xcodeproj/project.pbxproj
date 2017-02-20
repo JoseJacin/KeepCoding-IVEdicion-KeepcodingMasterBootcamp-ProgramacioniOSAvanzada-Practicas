@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE588C2C17E9CE3BE7E66E19 /* Pods_Everpobre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EBFA96036D9451BC91B1CE /* Pods_Everpobre.framework */; };
+		DF6B300B1E5BB31300C6ED4D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B300A1E5BB31300C6ED4D /* CoreDataManager.swift */; };
+		DF6B300E1E5BB34C00C6ED4D /* Notebook+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B300D1E5BB34C00C6ED4D /* Notebook+Utils.swift */; };
+		DF6B30101E5BB35E00C6ED4D /* Note+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B300F1E5BB35E00C6ED4D /* Note+Utils.swift */; };
+		DFBD32C81E5BA6EE004F42C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD32C71E5BA6EE004F42C0 /* AppDelegate.swift */; };
+		DFBD32CA1E5BA6EE004F42C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD32C91E5BA6EE004F42C0 /* ViewController.swift */; };
+		DFBD32CD1E5BA6EE004F42C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFBD32CB1E5BA6EE004F42C0 /* Main.storyboard */; };
+		DFBD32D01E5BA6EE004F42C0 /* Everpobre.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFBD32CE1E5BA6EE004F42C0 /* Everpobre.xcdatamodeld */; };
+		DFBD32D21E5BA6EE004F42C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFBD32D11E5BA6EE004F42C0 /* Assets.xcassets */; };
+		DFBD32D51E5BA6EE004F42C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFBD32D31E5BA6EE004F42C0 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		26875471139F76E079C9C94F /* Pods-Everpobre.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Everpobre.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Everpobre/Pods-Everpobre.debug.xcconfig"; sourceTree = "<group>"; };
+		2F907830ACA0FE10334F4EBE /* Pods-Everpobre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Everpobre.release.xcconfig"; path = "Pods/Target Support Files/Pods-Everpobre/Pods-Everpobre.release.xcconfig"; sourceTree = "<group>"; };
+		89EBFA96036D9451BC91B1CE /* Pods_Everpobre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Everpobre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF6B300A1E5BB31300C6ED4D /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		DF6B300D1E5BB34C00C6ED4D /* Notebook+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notebook+Utils.swift"; sourceTree = "<group>"; };
+		DF6B300F1E5BB35E00C6ED4D /* Note+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+Utils.swift"; sourceTree = "<group>"; };
+		DFBD32C41E5BA6EE004F42C0 /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFBD32C71E5BA6EE004F42C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DFBD32C91E5BA6EE004F42C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DFBD32CC1E5BA6EE004F42C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFBD32CF1E5BA6EE004F42C0 /* Everpobre.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Everpobre.xcdatamodel; sourceTree = "<group>"; };
+		DFBD32D11E5BA6EE004F42C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFBD32D41E5BA6EE004F42C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DFBD32D61E5BA6EE004F42C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFBD32C11E5BA6EE004F42C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE588C2C17E9CE3BE7E66E19 /* Pods_Everpobre.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7818D02352AB28DD5813DB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26875471139F76E079C9C94F /* Pods-Everpobre.debug.xcconfig */,
+				2F907830ACA0FE10334F4EBE /* Pods-Everpobre.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DF6B30061E5BAD4100C6ED4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DFBD32CE1E5BA6EE004F42C0 /* Everpobre.xcdatamodeld */,
+				DF6B300D1E5BB34C00C6ED4D /* Notebook+Utils.swift */,
+				DF6B300F1E5BB35E00C6ED4D /* Note+Utils.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DF6B30071E5BAD4500C6ED4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DFBD32C91E5BA6EE004F42C0 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DF6B30081E5BAD5300C6ED4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DFBD32D31E5BA6EE004F42C0 /* LaunchScreen.storyboard */,
+				DFBD32CB1E5BA6EE004F42C0 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DF6B30091E5BAD7000C6ED4D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DFBD32D11E5BA6EE004F42C0 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		DF6B300C1E5BB32400C6ED4D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DF6B300A1E5BB31300C6ED4D /* CoreDataManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		DFBD32BB1E5BA6EE004F42C0 = {
+			isa = PBXGroup;
+			children = (
+				DFBD32C61E5BA6EE004F42C0 /* Everpobre */,
+				DFBD32C51E5BA6EE004F42C0 /* Products */,
+				D7818D02352AB28DD5813DB6 /* Pods */,
+				E828B18092DA70DFD4EE4B10 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DFBD32C51E5BA6EE004F42C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFBD32C41E5BA6EE004F42C0 /* Everpobre.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFBD32C61E5BA6EE004F42C0 /* Everpobre */ = {
+			isa = PBXGroup;
+			children = (
+				DFBD32C71E5BA6EE004F42C0 /* AppDelegate.swift */,
+				DF6B30081E5BAD5300C6ED4D /* View */,
+				DF6B30071E5BAD4500C6ED4D /* Controller */,
+				DF6B30061E5BAD4100C6ED4D /* Model */,
+				DF6B300C1E5BB32400C6ED4D /* Managers */,
+				DF6B30091E5BAD7000C6ED4D /* Assets */,
+				DFBD32D61E5BA6EE004F42C0 /* Info.plist */,
+			);
+			path = Everpobre;
+			sourceTree = "<group>";
+		};
+		E828B18092DA70DFD4EE4B10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89EBFA96036D9451BC91B1CE /* Pods_Everpobre.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFBD32C31E5BA6EE004F42C0 /* Everpobre */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFBD32D91E5BA6EE004F42C0 /* Build configuration list for PBXNativeTarget "Everpobre" */;
+			buildPhases = (
+				6009F308FA2D29D14922E3A9 /* [CP] Check Pods Manifest.lock */,
+				DFBD32C01E5BA6EE004F42C0 /* Sources */,
+				DFBD32C11E5BA6EE004F42C0 /* Frameworks */,
+				DFBD32C21E5BA6EE004F42C0 /* Resources */,
+				844043520D71532979BA98D1 /* [CP] Embed Pods Frameworks */,
+				D2CAF00298C86D5268974EC1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Everpobre;
+			productName = Everpobre;
+			productReference = DFBD32C41E5BA6EE004F42C0 /* Everpobre.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFBD32BC1E5BA6EE004F42C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Jose Sanchez Rodriguez";
+				TargetAttributes = {
+					DFBD32C31E5BA6EE004F42C0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6RPGGVZM93;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DFBD32BF1E5BA6EE004F42C0 /* Build configuration list for PBXProject "Everpobre" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFBD32BB1E5BA6EE004F42C0;
+			productRefGroup = DFBD32C51E5BA6EE004F42C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFBD32C31E5BA6EE004F42C0 /* Everpobre */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFBD32C21E5BA6EE004F42C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFBD32D51E5BA6EE004F42C0 /* LaunchScreen.storyboard in Resources */,
+				DFBD32D21E5BA6EE004F42C0 /* Assets.xcassets in Resources */,
+				DFBD32CD1E5BA6EE004F42C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6009F308FA2D29D14922E3A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		844043520D71532979BA98D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Everpobre/Pods-Everpobre-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2CAF00298C86D5268974EC1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Everpobre/Pods-Everpobre-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFBD32C01E5BA6EE004F42C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFBD32CA1E5BA6EE004F42C0 /* ViewController.swift in Sources */,
+				DFBD32C81E5BA6EE004F42C0 /* AppDelegate.swift in Sources */,
+				DF6B300E1E5BB34C00C6ED4D /* Notebook+Utils.swift in Sources */,
+				DF6B300B1E5BB31300C6ED4D /* CoreDataManager.swift in Sources */,
+				DFBD32D01E5BA6EE004F42C0 /* Everpobre.xcdatamodeld in Sources */,
+				DF6B30101E5BB35E00C6ED4D /* Note+Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DFBD32CB1E5BA6EE004F42C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFBD32CC1E5BA6EE004F42C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DFBD32D31E5BA6EE004F42C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFBD32D41E5BA6EE004F42C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DFBD32D71E5BA6EE004F42C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DFBD32D81E5BA6EE004F42C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFBD32DA1E5BA6EE004F42C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26875471139F76E079C9C94F /* Pods-Everpobre.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6RPGGVZM93;
+				INFOPLIST_FILE = Everpobre/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JoseJacin.Everpobre;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DFBD32DB1E5BA6EE004F42C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F907830ACA0FE10334F4EBE /* Pods-Everpobre.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6RPGGVZM93;
+				INFOPLIST_FILE = Everpobre/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JoseJacin.Everpobre;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFBD32BF1E5BA6EE004F42C0 /* Build configuration list for PBXProject "Everpobre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFBD32D71E5BA6EE004F42C0 /* Debug */,
+				DFBD32D81E5BA6EE004F42C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFBD32D91E5BA6EE004F42C0 /* Build configuration list for PBXNativeTarget "Everpobre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFBD32DA1E5BA6EE004F42C0 /* Debug */,
+				DFBD32DB1E5BA6EE004F42C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DFBD32CE1E5BA6EE004F42C0 /* Everpobre.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DFBD32CF1E5BA6EE004F42C0 /* Everpobre.xcdatamodel */,
+			);
+			currentVersion = DFBD32CF1E5BA6EE004F42C0 /* Everpobre.xcdatamodel */;
+			path = Everpobre.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DFBD32BC1E5BA6EE004F42C0 /* Project object */;
+}
