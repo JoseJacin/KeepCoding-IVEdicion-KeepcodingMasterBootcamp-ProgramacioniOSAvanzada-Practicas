@@ -15,12 +15,20 @@
 		DF6B300B1E5BB31300C6ED4D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B300A1E5BB31300C6ED4D /* CoreDataManager.swift */; };
 		DF6B300E1E5BB34C00C6ED4D /* Notebook+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B300D1E5BB34C00C6ED4D /* Notebook+Utils.swift */; };
 		DF6B30101E5BB35E00C6ED4D /* Note+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B300F1E5BB35E00C6ED4D /* Note+Utils.swift */; };
+		DF79435F1E5F6ECF00C2611A /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF79435E1E5F6ECF00C2611A /* NoteCell.swift */; };
+		DF7943611E5F717F00C2611A /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7943601E5F717F00C2611A /* NotesController.swift */; };
+		DF7943631E5F7AAF00C2611A /* AddEditNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7943621E5F7AAF00C2611A /* AddEditNoteController.swift */; };
 		DFBD32C81E5BA6EE004F42C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD32C71E5BA6EE004F42C0 /* AppDelegate.swift */; };
 		DFBD32CA1E5BA6EE004F42C0 /* NotebooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD32C91E5BA6EE004F42C0 /* NotebooksController.swift */; };
 		DFBD32CD1E5BA6EE004F42C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFBD32CB1E5BA6EE004F42C0 /* Main.storyboard */; };
 		DFBD32D01E5BA6EE004F42C0 /* Everpobre.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFBD32CE1E5BA6EE004F42C0 /* Everpobre.xcdatamodeld */; };
 		DFBD32D21E5BA6EE004F42C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFBD32D11E5BA6EE004F42C0 /* Assets.xcassets */; };
 		DFBD32D51E5BA6EE004F42C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFBD32D31E5BA6EE004F42C0 /* LaunchScreen.storyboard */; };
+		DFC0031B1E5F7F1400BBE4CF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0031A1E5F7F1400BBE4CF /* Utils.swift */; };
+		DFC0031D1E5F7FED00BBE4CF /* UIViewController+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0031C1E5F7FED00BBE4CF /* UIViewController+Pop.swift */; };
+		DFC0031F1E5F80B300BBE4CF /* Popable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0031E1E5F80B300BBE4CF /* Popable.swift */; };
+		DFC003211E5F83A300BBE4CF /* NotesController+NSFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC003201E5F83A300BBE4CF /* NotesController+NSFetchResultController.swift */; };
+		DFC003231E5F848800BBE4CF /* NotesController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC003221E5F848800BBE4CF /* NotesController+UICollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +42,9 @@
 		DF6B300A1E5BB31300C6ED4D /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		DF6B300D1E5BB34C00C6ED4D /* Notebook+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notebook+Utils.swift"; sourceTree = "<group>"; };
 		DF6B300F1E5BB35E00C6ED4D /* Note+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+Utils.swift"; sourceTree = "<group>"; };
+		DF79435E1E5F6ECF00C2611A /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		DF7943601E5F717F00C2611A /* NotesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesController.swift; path = NotesController/NotesController.swift; sourceTree = "<group>"; };
+		DF7943621E5F7AAF00C2611A /* AddEditNoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEditNoteController.swift; path = NotesController/AddEditNoteController.swift; sourceTree = "<group>"; };
 		DFBD32C41E5BA6EE004F42C0 /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBD32C71E5BA6EE004F42C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFBD32C91E5BA6EE004F42C0 /* NotebooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebooksController.swift; sourceTree = "<group>"; };
@@ -42,6 +53,11 @@
 		DFBD32D11E5BA6EE004F42C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFBD32D41E5BA6EE004F42C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFBD32D61E5BA6EE004F42C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFC0031A1E5F7F1400BBE4CF /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		DFC0031C1E5F7FED00BBE4CF /* UIViewController+Pop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Pop.swift"; sourceTree = "<group>"; };
+		DFC0031E1E5F80B300BBE4CF /* Popable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popable.swift; sourceTree = "<group>"; };
+		DFC003201E5F83A300BBE4CF /* NotesController+NSFetchResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotesController+NSFetchResultController.swift"; sourceTree = "<group>"; };
+		DFC003221E5F848800BBE4CF /* NotesController+UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotesController+UICollectionView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +84,10 @@
 		DF59AEFD1E5CFF5E0043E9C8 /* NotebooksController */ = {
 			isa = PBXGroup;
 			children = (
+				DFBD32C91E5BA6EE004F42C0 /* NotebooksController.swift */,
 				DF59AEF91E5CF5500043E9C8 /* NotebooksController+NSFetchResultController.swift */,
 				DF59AEF71E5CF1290043E9C8 /* NotebooksController+UICollectionView.swift */,
-				DFBD32C91E5BA6EE004F42C0 /* NotebooksController.swift */,
 			);
-			name = NotebooksController;
 			path = NotebooksController;
 			sourceTree = "<group>";
 		};
@@ -83,17 +98,19 @@
 				DF6B300F1E5BB35E00C6ED4D /* Note+Utils.swift */,
 				DF6B300D1E5BB34C00C6ED4D /* Notebook+Utils.swift */,
 			);
-			name = Model;
 			path = Model;
 			sourceTree = "<group>";
 		};
 		DF6B30071E5BAD4500C6ED4D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DF7943571E5F6B9200C2611A /* NotesController */,
 				DF59AEFD1E5CFF5E0043E9C8 /* NotebooksController */,
 				DF59AEF51E5CDBF30043E9C8 /* AddEditNotebookController.swift */,
+				DF7943621E5F7AAF00C2611A /* AddEditNoteController.swift */,
+				DFC0031C1E5F7FED00BBE4CF /* UIViewController+Pop.swift */,
+				DFC0031E1E5F80B300BBE4CF /* Popable.swift */,
 			);
-			name = Controller;
 			path = Controller;
 			sourceTree = "<group>";
 		};
@@ -103,8 +120,8 @@
 				DFBD32D31E5BA6EE004F42C0 /* LaunchScreen.storyboard */,
 				DFBD32CB1E5BA6EE004F42C0 /* Main.storyboard */,
 				DF59AEFB1E5CF97A0043E9C8 /* NotebookCell.swift */,
+				DF79435E1E5F6ECF00C2611A /* NoteCell.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -113,7 +130,6 @@
 			children = (
 				DFBD32D11E5BA6EE004F42C0 /* Assets.xcassets */,
 			);
-			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
@@ -122,8 +138,17 @@
 			children = (
 				DF6B300A1E5BB31300C6ED4D /* CoreDataManager.swift */,
 			);
-			name = Managers;
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		DF7943571E5F6B9200C2611A /* NotesController */ = {
+			isa = PBXGroup;
+			children = (
+				DF7943601E5F717F00C2611A /* NotesController.swift */,
+				DFC003201E5F83A300BBE4CF /* NotesController+NSFetchResultController.swift */,
+				DFC003221E5F848800BBE4CF /* NotesController+UICollectionView.swift */,
+			);
+			name = NotesController;
 			sourceTree = "<group>";
 		};
 		DFBD32BB1E5BA6EE004F42C0 = {
@@ -154,6 +179,7 @@
 				DF6B30081E5BAD5300C6ED4D /* View */,
 				DFBD32C71E5BA6EE004F42C0 /* AppDelegate.swift */,
 				DFBD32D61E5BA6EE004F42C0 /* Info.plist */,
+				DFC0031A1E5F7F1400BBE4CF /* Utils.swift */,
 			);
 			path = Everpobre;
 			sourceTree = "<group>";
@@ -291,12 +317,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFBD32CA1E5BA6EE004F42C0 /* NotebooksController.swift in Sources */,
+				DFC003211E5F83A300BBE4CF /* NotesController+NSFetchResultController.swift in Sources */,
 				DF59AEFA1E5CF5500043E9C8 /* NotebooksController+NSFetchResultController.swift in Sources */,
+				DFC0031D1E5F7FED00BBE4CF /* UIViewController+Pop.swift in Sources */,
+				DF7943631E5F7AAF00C2611A /* AddEditNoteController.swift in Sources */,
+				DFC0031B1E5F7F1400BBE4CF /* Utils.swift in Sources */,
 				DF59AEFC1E5CF97A0043E9C8 /* NotebookCell.swift in Sources */,
+				DF79435F1E5F6ECF00C2611A /* NoteCell.swift in Sources */,
 				DFBD32C81E5BA6EE004F42C0 /* AppDelegate.swift in Sources */,
 				DF6B300E1E5BB34C00C6ED4D /* Notebook+Utils.swift in Sources */,
+				DFC003231E5F848800BBE4CF /* NotesController+UICollectionView.swift in Sources */,
 				DF6B300B1E5BB31300C6ED4D /* CoreDataManager.swift in Sources */,
 				DFBD32D01E5BA6EE004F42C0 /* Everpobre.xcdatamodeld in Sources */,
+				DFC0031F1E5F80B300BBE4CF /* Popable.swift in Sources */,
+				DF7943611E5F717F00C2611A /* NotesController.swift in Sources */,
 				DF59AEF81E5CF1290043E9C8 /* NotebooksController+UICollectionView.swift in Sources */,
 				DF6B30101E5BB35E00C6ED4D /* Note+Utils.swift in Sources */,
 				DF59AEF61E5CDBF30043E9C8 /* AddEditNotebookController.swift in Sources */,

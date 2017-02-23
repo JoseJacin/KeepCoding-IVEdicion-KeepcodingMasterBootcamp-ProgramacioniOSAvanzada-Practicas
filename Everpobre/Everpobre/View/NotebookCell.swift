@@ -13,7 +13,7 @@ class NotebookCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var numberNotesLabel: UILabel!
     
-    var _notebook: Notebook? = nil
+    private var _notebook: Notebook? = nil
     var notebook: Notebook {
         get {
            return _notebook!

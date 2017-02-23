@@ -17,6 +17,7 @@ extension Notebook {
         // Edit the sort key as appropriate.
         let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
         
+        // Se establece el orden de los resultados
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         return fetchRequest

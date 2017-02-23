@@ -39,11 +39,12 @@ class NotebooksController: UIViewController {
             // Se comprueba que se encuentra en el segue NotesSegue
             if identifier == "NotesSegue" {
                 // Se retorna el primer elemento del item seleccionado (solo hay uno)
-                //let indexPath = collectionView.indexPathsForSelectedItems?.first
-                //let notebook = fetchedResultsController.object(at: indexPath!)
+                let indexPath = collectionView.indexPathsForSelectedItems?.first
+                let notebook = fetchedResultsController.object(at: indexPath!)
                 // Se obtiene el ViewController destino
-                //let vc = segue.destination as! AddEditNoteController
+                let vc = segue.destination as! NotesController
                 //notebook.notes
+                vc.notebook = notebook
             }
         }
     }

@@ -15,12 +15,27 @@ class AddEditNotebookController: UIViewController {
     
     // Propiedades
     @IBOutlet weak var notebookNametextField: UITextField!
+    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var topBackgroundConstraint: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.backgroundView.layer.cornerRadius = 10.0
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 2.0, animations: { 
+            self.backgroundView.frame = CGRect(x: self.backgroundView.frame.origin.x, y: 15, width: self.backgroundView.frame.width, height: self.backgroundView.frame.height)
+            self.backgroundView.backgroundColor = UIColor.red
+        }) { (b: Bool) in
+            self.topBackgroundConstraint.constant = 15.0
+        }
+    }
     
     @IBAction func saveButtonClicked(_ sender: Any) {
         
@@ -35,6 +50,8 @@ class AddEditNotebookController: UIViewController {
         saveContext(context: context)
         
         // Se sale del NavigationController y se retorna a la pantalla principal
-        let _ = self.navigationController?.popViewController(animated: true)
+        popFunctional(nav: self.navigationController)
     }
+    
+    
 }

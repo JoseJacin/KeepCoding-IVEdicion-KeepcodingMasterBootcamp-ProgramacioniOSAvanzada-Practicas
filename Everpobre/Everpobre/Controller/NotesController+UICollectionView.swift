@@ -1,14 +1,14 @@
 //
-//  NotebooksController+UICollectionView.swift
+//  NotesController+UICollectionView.swift
 //  Everpobre
 //
-//  Created by Jose Sanchez Rodriguez on 21/2/17.
+//  Created by Jose Sanchez Rodriguez on 23/2/17.
 //  Copyright © 2017 Jose Sanchez Rodriguez. All rights reserved.
 //
 
 import UIKit
 
-extension NotebooksController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension NotesController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     // Función que establece el número de secciones del collectionView
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -24,9 +24,9 @@ extension NotebooksController: UICollectionViewDelegate, UICollectionViewDataSou
     // Función que retorna el item sobre el que se está realizando una acción
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // Se crean la celda de cada item
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NotebookCell", for: indexPath) as! NotebookCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NoteCell", for: indexPath) as! NoteCell
         // Se configura la celda
-        cell.notebook = self.fetchedResultsController.object(at: indexPath)
+        cell.note = self.fetchedResultsController.object(at: indexPath)
         
         // Se retorna la celda
         return cell
