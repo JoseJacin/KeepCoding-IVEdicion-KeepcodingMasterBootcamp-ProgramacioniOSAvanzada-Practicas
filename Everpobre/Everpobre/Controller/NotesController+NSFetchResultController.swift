@@ -17,7 +17,7 @@ extension NotesController: NSFetchedResultsControllerDelegate{
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        _fetchedResultsController = NSFetchedResultsController(fetchRequest: Note.notesFrom(notebook: self.notebook), managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: "Master")
+        _fetchedResultsController = NSFetchedResultsController(fetchRequest: Note.notesFrom(notebook: self.notebook), managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: self.notebook.title)
         _fetchedResultsController?.delegate = self
         
         do {
